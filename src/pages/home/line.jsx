@@ -33,32 +33,10 @@ export default class Line extends Component {
         }
     }
 
-    getOption2 = () => {
-        const {sales,inventorys} = this.state
-        return{
-
-            xAxis: {
-                type:'category',
-                boundaryGao:false,
-                data:['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
-            },
-            yAxis: {
-                type:'value'
-            },
-            series: [{
-                data:[820,932,901,934,1290,1330,1320],
-                type:'line',
-                areaStyle:{}
-            }]
-        }
-    }
-
     update = () => {
         const sales = this.state.sales.map(sale => sale+1)
-        const inventorys = this.state.inventorys.map(inventory => inventory-1)
         this.setState({
             sales,
-            inventorys
         })
     }
 

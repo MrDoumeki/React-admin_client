@@ -44,7 +44,7 @@ const menuList = [
                 icon:'<LineChartOutlined />'
             },
             {
-                title:'条形图',
+                title:'柱状图',
                 key:'/admin/bar',
                 icon:'<BarChartOutlined />'
             }

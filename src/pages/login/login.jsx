@@ -1,11 +1,13 @@
 import React,{Component} from 'react'
 import './login.less'
 import { Form, Input, Button} from 'antd'
+
 // import memoryUtils from "../../utils/memoryUtils";
 // import {Redirect} from "react-router-dom";
 // import {reqLogin} from '../../api'
 // import memoryUtils from '../../utils/memoryUtils'
- export default class Login extends Component{
+  export default class Login extends Component{
+
 
      formRef = React.createRef()
 
@@ -13,6 +15,7 @@ import { Form, Input, Button} from 'antd'
           //阻止事件的默认行为
           const info = this.formRef.current.getFieldsValue()
           console.log(info);
+        //   this.props.login()
          // reqLogin(info.username,info.password).then(res=>{
          //     console.log(res.data);
          // }).catch(error=>{
@@ -97,4 +100,16 @@ import { Form, Input, Button} from 'antd'
 
 
 
+
+// const mapStateToProps = (state) => {
+//   return {
+//     user: state.user
+//   }
+// }
+
+// const mapDispatchToProps = {
+//   login
+// } 
+
+// export default connect(mapStateToProps, mapDispatchToProps)(WrapLogin)
 

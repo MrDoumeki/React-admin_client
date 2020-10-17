@@ -1,12 +1,12 @@
 import React from 'react'
-import { Table, Space, Divider } from 'antd';
+import {Link} from 'react-router-dom'
+import { Table, Space, Card } from 'antd';
 import './index.less'
 
 const columns = [
     {
         title: 'Name',
         dataIndex: 'name',
-        render: text => <a>{text}</a>,
     },
     {
         title: 'Age',
@@ -23,9 +23,9 @@ const columns = [
         render: () => {
             return(
                 <Space size="middle">
-                    <a>删除</a>
-                    <a>修改</a>
-                    <a>详情</a>
+                    <a href="https://www.bilibili.com/video/BV1RZ4y1P7Gc/?spm_id_from=333.788.videocard.2">删除</a>
+                    <a href="https://www.bilibili.com/video/BV1RZ4y1P7Gc/?spm_id_from=333.788.videocard.2">修改</a>
+                    <Link to='/admin/product-detail'>详情</Link>
                 </Space>
             )
         },
@@ -88,12 +88,12 @@ export default class Product extends React.Component{
     render() {
         return(
             <div className="product">
-                <h3>商品列表</h3>
-                <Divider />
-                <Table
-                    columns={columns}
-                    dataSource={data}
-                />
+                <Card title="商品列表">
+                    <Table
+                        columns={columns}
+                        dataSource={data}
+                    />
+                </Card>
             </div>
         )
     }
